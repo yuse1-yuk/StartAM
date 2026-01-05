@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Morning Brief",
-    short_name: "Morning",
+    name: "StartAM",
+    short_name: "StartAM",
     description: "朝起きてすぐ天気と予定をまとめて見るダッシュボード",
     start_url: "/",
     scope: "/",
