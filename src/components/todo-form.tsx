@@ -19,6 +19,11 @@ export function TodoForm() {
     setError(null);
     try {
       const res = await fetch("/api/todos", { cache: "no-store" });
+      if (res.status === 401) {
+        setError("Google連携後に利用できます。ホームで連携して再読み込みしてください。");
+        setTodos([]);
+        return;
+      }
       if (!res.ok) throw new Error("failed");
       const data = await res.json();
       setTodos(data.todos ?? []);
@@ -48,6 +53,10 @@ export function TodoForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text, target_date: targetDate }),
       });
+      if (res.status === 401) {
+        setError("Google連携後に利用できます。ホームで連携して再読み込みしてください。");
+        return;
+      }
       if (!res.ok) throw new Error("failed");
       setText("");
       setMessage("保存しました");

@@ -1,6 +1,7 @@
 import { NavBar } from "@/components/nav";
 import { NewsKeywordsForm } from "@/components/news-keywords-form";
 import { LogoutButton } from "@/components/logout-button";
+import { LogoutNotice } from "@/components/logout-notice";
 
 export default function SettingsPage() {
   return (
@@ -16,6 +17,7 @@ export default function SettingsPage() {
             ニュース検索のキーワードを管理できます。Googleカレンダーの連携はホーム画面から行えます。
           </p>
         </header>
+        <LogoutNotice />
         <NewsKeywordsForm />
         <div className="flex justify-end">
           <LogoutButton />

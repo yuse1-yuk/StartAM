@@ -3,7 +3,7 @@
 export function LogoutButton() {
   const logout = async () => {
     await fetch("/api/google/logout", { method: "POST", credentials: "include" });
-    window.location.reload();
+    window.location.assign("/settings?logout=done");
   };
 
   return (
