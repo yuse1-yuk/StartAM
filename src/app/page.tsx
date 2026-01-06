@@ -29,14 +29,6 @@ export default function Home() {
               天気と予定をワンビューで。家を出る前に迷わない朝を。
             </p>
           </div>
-          <div className="flex flex-wrap items-center gap-3">
-            <span className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs text-white/80">
-              位置情報で天気を取得
-            </span>
-            <span className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs text-white/80">
-              Googleカレンダー連携
-            </span>
-          </div>
         </header>
 
         <main className="grid gap-5 sm:gap-6 xl:grid-cols-3">
